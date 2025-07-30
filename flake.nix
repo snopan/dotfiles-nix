@@ -15,7 +15,7 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix4vscode, home-manager }:
   let
-    configuration = { pkgs, specialArgs, ... }: {
+    configuration = { pkgs, specialArgs, ... }: with specialArgs; {
       imports = [./modules/darwin/default.nix];
 
       # Allow unfree packages
@@ -42,10 +42,10 @@
       nix.enable = false;
 
       # Set user for homebrew
-      # users.users.snoapn = {
-      #   name = "snoapn";
-      #   home = "/Users/snopan";
-      # };
+      users.users.snoapn = {
+        name = "snoapn";
+        home = "/Users/snopan";
+      };
 
       # Enable home manager and import home manager related settings
       # home-manager.useGlobalPkgs = true;

@@ -1,6 +1,6 @@
 { pkgs, specialArgs, ... }: {
   # Add nix4vscode overlay to import extension through that
-  nixpkgs.overlays = [ specialArgs.inputs.nix4vscode.overlays.forVscode ];
+  nixpkgs.overlays = [ inputs.nix4vscode.overlays.forVscode ];
   
   # Install vscodium with extensions and settings
   environment.systemPackages = with pkgs; [
