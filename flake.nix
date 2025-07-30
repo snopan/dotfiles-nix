@@ -15,7 +15,7 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix4vscode, home-manager }:
   let
-    configuration = { pkgs, specialArgs, ... }: with specialArgs; {
+    configuration = { pkgs, specialArgs, ... }: {
       imports = [./modules/darwin/default.nix];
 
       # Allow unfree packages
@@ -46,11 +46,6 @@
         name = "snoapn";
         home = "/Users/snopan";
       };
-
-      # Enable home manager and import home manager related settings
-      # home-manager.useGlobalPkgs = true;
-      # home-manager.useUserPackages = true;
-      # home-manager.users.snopan = import ./home/default.nix;
     };
   in
   {
@@ -58,7 +53,15 @@
     # $ darwin-rebuild build --flake .#snopans-MacBook-Pro
     darwinConfigurations."snopans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
       specialArgs = { inherit inputs; };
-      modules = [ configuration ];
+      modules = [
+        configuration
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+        # home-manager.users.snopan = import ./home/default.nix;
+        }
+      ];
     };
   };
 }
