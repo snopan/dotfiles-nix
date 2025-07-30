@@ -7,7 +7,6 @@
     ./git.nix
     ./bitwarden.nix
     ./macsettings.nix
-    ./chromium.nix
   ];
 
   # Install packages that require no configuration

@@ -9,12 +9,14 @@
       url = "github:nix-community/nix4vscode";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix4vscode }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix4vscode, home-manager }:
   let
     configuration = { pkgs, specialArgs, ... }: {
-      imports = [./modules/default.nix];
+      imports = [./modules/darwin/default.nix];
 
       # Allow unfree packages
       nixpkgs.config.allowUnfree = true;
@@ -38,6 +40,17 @@
       # Determinate uses its own daemon to manage the Nix installation that
       # conflicts with nix-darwin’s native Nix management.
       nix.enable = false;
+
+      # Set user for homebrew
+      # users.users.snoapn = {
+      #   name = "snoapn";
+      #   home = "/Users/snopan";
+      # };
+
+      # Enable home manager and import home manager related settings
+      # home-manager.useGlobalPkgs = true;
+      # home-manager.useUserPackages = true;
+      # home-manager.users.snopan = import ./home/default.nix;
     };
   in
   {
