@@ -41,11 +41,9 @@
       # conflicts with nix-darwin’s native Nix management.
       nix.enable = false;
 
-      # Set user for homebrew
-      users.users.snoapn = {
-        name = "snoapn";
-        home = "/Users/snopan";
-      };
+      # Set user for home-manager
+      users.users.snopan.name = "snopan";
+      users.users.snopan.home = "/Users/snopan";
     };
   in
   {
@@ -59,7 +57,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-        # home-manager.users.snopan = import ./home/default.nix;
+          home-manager.users.snopan = import ./modules/home/default.nix;
         }
       ];
     };
