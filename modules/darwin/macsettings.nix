@@ -15,5 +15,7 @@
     finder.FXPreferredViewStyle = "clmv";
     # Save screen capture to clipboard
     screencapture.target = "clipboard";
+    # Disable reveal desktop upon clicking wallpaper
+    WindowManager.EnableStandardClickToShowDesktop = false;
   };
 }
