@@ -12,5 +12,6 @@
   # Install packages that require no configuration
   environment.systemPackages = with pkgs; [
     obsidian
+    discord
   ];
 }

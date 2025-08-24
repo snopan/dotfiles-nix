@@ -1,4 +1,4 @@
-{ ... }: {
+{ specialArgs, ... }: {
   imports = [
     ./firefox.nix
   ];
