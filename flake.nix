@@ -7,7 +7,6 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nur = {
       url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     nix4vscode = {
       url = "github:nix-community/nix4vscode";
@@ -19,7 +18,7 @@
 
   outputs = inputs@{ self, nix-darwin, nur, nixpkgs, nix4vscode, home-manager }:
   let
-    configuration = { pkgs, specialArgs, ... }: {
+    darwinConfig = { pkgs, specialArgs, ... }: {
       imports = [./modules/darwin/default.nix];
 
       # Allow unfree packages
@@ -50,19 +49,21 @@
       users.users.snopan.home = "/Users/snopan";
     };
   in
+  let homeManagerConfig = {
+      home-manager.extraSpecialArgs = { inherit inputs; };
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.users.snopan = import ./modules/home/default.nix;
+    };
+  in
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#snopans-MacBook-Pro
     darwinConfigurations."snopans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        configuration
-        home-manager.darwinModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.snopan = import ./modules/home/default.nix;
-        }
+        darwinConfig
+        home-manager.darwinModules.home-manager homeManagerConfig
       ];
     };
   };

@@ -31,6 +31,10 @@ After the flake is applied there are a list of manual steps to take
     * Set to not ask for authorization when using SSH Agent (not implemented yet)
     * Turn off "Allow screen capture"
 
+## Applications not supported
+These are the applications that is not supported yet in nixpkgs and will need to be manually installed and configured
+* Sublime Merge
+
 ## Editing Flake
 1. Clone down the flake repository in `/etc`
 ```
