@@ -16,6 +16,6 @@
     spotify
     go
     yarn
-    nodejs_24
+    nodejs_20
   ];
 }
