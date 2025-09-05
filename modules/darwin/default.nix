@@ -15,7 +15,9 @@
     discord
     spotify
     go
-    yarn
     nodejs_20
+    (yarn.override {
+      nodejs = null;
+    })
   ];
 }
