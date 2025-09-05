@@ -8,6 +8,7 @@
       vscode = vscodium;
       vscodeExtensions = with vscode-extensions; [
         bbenoist.nix
+        golang.go
       ] ++ pkgs.nix4vscode.forVscode [
         "zhuangtongfa.material-theme"
       ];
