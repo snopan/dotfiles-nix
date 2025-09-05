@@ -15,5 +15,7 @@
     discord
     spotify
     go
+    yarn
+    nodejs_24
   ];
 }
