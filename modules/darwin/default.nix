@@ -13,6 +13,7 @@
   environment.systemPackages = with pkgs; [
     obsidian
     discord
-    sublime
+    spotify
+    go
   ];
 }
