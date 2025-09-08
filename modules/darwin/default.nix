@@ -7,6 +7,7 @@
     ./git.nix
     ./bitwarden.nix
     ./macsettings.nix
+    ./docker.nix
   ];
 
   # Install packages that require no configuration
@@ -14,7 +15,6 @@
     obsidian
     discord
     spotify
-    docker
     go
     nodejs_20
     (yarn.override {
