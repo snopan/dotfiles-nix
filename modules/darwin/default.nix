@@ -14,6 +14,7 @@
     obsidian
     discord
     spotify
+    docker
     go
     nodejs_20
     (yarn.override {
