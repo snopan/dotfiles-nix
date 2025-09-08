@@ -7,7 +7,6 @@
     ./git.nix
     ./bitwarden.nix
     ./macsettings.nix
-    ./docker.nix
   ];
 
   # Install packages that require no configuration
