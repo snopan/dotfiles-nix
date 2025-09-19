@@ -16,6 +16,7 @@
     spotify
     go
     wget
+    mongodb-tools
     (yarn.override {
       nodejs = null;
     })
