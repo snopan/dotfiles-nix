@@ -9,6 +9,7 @@
       vscodeExtensions = with vscode-extensions; [
         bbenoist.nix
         golang.go
+        waderyan.gitblame
       ] ++ pkgs.nix4vscode.forVscode [
         "zhuangtongfa.material-theme"
       ];
