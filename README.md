@@ -35,6 +35,7 @@ After the flake is applied there are a list of manual steps to take
 These are the applications that is not supported yet in nixpkgs and will need to be manually installed and configured
 * Sublime Merge
 * Docker
+* NVM - Using this to get end of life node versions
 
 ## Manual Steps for setup that has issues
 * Unable to get NUR working so firefox extensions needs to be manually added

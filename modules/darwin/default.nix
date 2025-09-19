@@ -15,7 +15,7 @@
     discord
     spotify
     go
-    nodejs_20
+    wget
     (yarn.override {
       nodejs = null;
     })
