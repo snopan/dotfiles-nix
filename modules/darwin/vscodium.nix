@@ -10,8 +10,11 @@
         bbenoist.nix
         golang.go
         waderyan.gitblame
+        bierner.markdown-mermaid
+        dbaeumer.vscode-eslint
       ] ++ pkgs.nix4vscode.forVscode [
         "zhuangtongfa.material-theme"
+        "amodio.tsl-problem-matcher"
       ];
     })
   ];
