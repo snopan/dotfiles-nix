@@ -12,9 +12,13 @@
         waderyan.gitblame
         bierner.markdown-mermaid
         dbaeumer.vscode-eslint
+        ms-python.python
       ] ++ pkgs.nix4vscode.forVscode [
         "zhuangtongfa.material-theme"
         "amodio.tsl-problem-matcher"
+        "ms-vscode.extension-test-runner"
+        "mtxr.sqltools"
+        "google-cloud-spanner-ecosystem.google-cloud-spanner-driver"
       ];
     })
   ];
