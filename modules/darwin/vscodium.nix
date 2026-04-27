@@ -18,6 +18,7 @@
         "amodio.tsl-problem-matcher"
         "ms-vscode.extension-test-runner"
         "rust-lang.rust-analyzer"
+        "tinygo.vscode-tinygo"
       ];
     })
   ];
