@@ -11,6 +11,7 @@
 
   # Install packages that require no configuration
   environment.systemPackages = with pkgs; [
+    tinygo
     obsidian
     discord
     spotify
