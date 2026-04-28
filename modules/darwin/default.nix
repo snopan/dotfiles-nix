@@ -18,6 +18,7 @@
     go
     wget
     mongodb-tools
+    cocoapods
     (yarn.override {
       nodejs = null;
     })
