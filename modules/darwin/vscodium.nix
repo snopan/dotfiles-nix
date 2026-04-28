@@ -19,6 +19,7 @@
         "ms-vscode.extension-test-runner"
         "rust-lang.rust-analyzer"
         "tinygo.vscode-tinygo"
+        "Vue.volar"
       ];
     })
   ];
