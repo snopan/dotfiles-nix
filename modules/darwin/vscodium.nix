@@ -20,6 +20,7 @@
         "rust-lang.rust-analyzer"
         "tinygo.vscode-tinygo"
         "Vue.volar"
+        "esbenp.prettier-vscode"
       ];
     })
   ];

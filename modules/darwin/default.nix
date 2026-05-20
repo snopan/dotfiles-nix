@@ -18,6 +18,7 @@
     go
     wget
     mongodb-tools
+    python310
     (yarn.override {
       nodejs = null;
     })
