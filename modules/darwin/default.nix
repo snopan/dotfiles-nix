@@ -17,8 +17,7 @@
     spotify
     go
     wget
-    mongodb-tools
-    python310
+    opencode
     (yarn.override {
       nodejs = null;
     })
