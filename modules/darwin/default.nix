@@ -9,6 +9,8 @@
     ./macsettings.nix
   ];
 
+  services.tailscale.enable = true;
+
   # Install packages that require no configuration
   environment.systemPackages = with pkgs; [
     tinygo
@@ -17,7 +19,6 @@
     spotify
     go
     wget
-    opencode
     (yarn.override {
       nodejs = null;
     })

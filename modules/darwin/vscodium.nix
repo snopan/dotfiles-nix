@@ -21,6 +21,7 @@
         "tinygo.vscode-tinygo"
         "Vue.volar"
         "esbenp.prettier-vscode"
+        "firsttris.vscode-jest-runner"
       ];
     })
   ];
