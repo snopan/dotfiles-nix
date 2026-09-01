@@ -1,6 +1,5 @@
 { pkgs, ... }: {
   imports = [
-    ./vscodium.nix
     ./yabai.nix
     ./raycast.nix
     ./unnaturalscrollwheels.nix
