@@ -1,6 +1,7 @@
 { specialArgs, ... }: {
   imports = [
     ./firefox.nix
+    ./vscode.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
