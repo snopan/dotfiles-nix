@@ -5,7 +5,7 @@
         package = pkgs.vscode; 
         
         # Declarative extension list
-        extensions = with pkgs.vscode-extensions; [
+        extensions = (with pkgs.vscode-extensions; [
             bbenoist.nix
             golang.go
             waderyan.gitblame
@@ -16,7 +16,7 @@
             rust-lang.rust-analyzer
             esbenp.prettier-vscode
             firsttris.vscode-jest-runner
-        ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             name = "opencode";
             publisher = "sst-dev";
