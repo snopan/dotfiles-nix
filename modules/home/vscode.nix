@@ -16,6 +16,13 @@
             rust-lang.rust-analyzer
             esbenp.prettier-vscode
             firsttris.vscode-jest-runner
+        ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+            name = "opencode";
+            publisher = "sst-dev";
+            version = "0.0.13";
+            sha256 = "sha256-6adXUaoh/OP5yYItH3GAQ7GpupfmTGaxkKP6hYUMYNQ="; 
+        }
         ];
 
         # Declarative settings.json settings
