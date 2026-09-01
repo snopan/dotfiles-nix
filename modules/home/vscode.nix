@@ -20,7 +20,7 @@
 
         # Declarative settings.json settings
         userSettings = {
-            "workbench.colorTheme" = "Dracula";
+            "workbench.colorTheme" = "One Dark Pro Darker";
             "editor.fontSize" = 14;
         };
     };
