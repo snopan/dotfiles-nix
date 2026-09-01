@@ -12,6 +12,6 @@
 
   # Set SSH_AUTH_SOCK to point to the Bitwarden SSH Agent socket
   programs.zsh.variables = {
-    SSH_AUTH_SOCK=''/Users/$(whoami)/.bitwarden-ssh-agent.sock'';
+    SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock";
   };
 }
