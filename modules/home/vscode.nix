@@ -16,6 +16,7 @@
             rust-lang.rust-analyzer
             esbenp.prettier-vscode
             firsttris.vscode-jest-runner
+            openai.chatgpt
         ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
             name = "opencode";
