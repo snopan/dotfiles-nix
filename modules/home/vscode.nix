@@ -17,18 +17,18 @@
             esbenp.prettier-vscode
             firsttris.vscode-jest-runner
         ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        {
-            name = "opencode";
-            publisher = "sst-dev";
-            version = "0.0.13";
-            sha256 = "sha256-6adXUaoh/OP5yYItH3GAQ7GpupfmTGaxkKP6hYUMYNQ="; 
-        }
-        {
-            name = "chatgpt";
-            publisher = "openai";
-            version = "26.908.31748";
-            sha256 = "sha256-etDbaBqJfIjbjY5TGOwnA4JddGaPx/7rWkE2gnSV4G8=";
-        }
+            {
+                name = "opencode";
+                publisher = "sst-dev";
+                version = "0.0.13";
+                sha256 = "sha256-6adXUaoh/OP5yYItH3GAQ7GpupfmTGaxkKP6hYUMYNQ="; 
+            }
+            {
+                name = "chatgpt";
+                publisher = "openai";
+                version = "26.908.31748";
+                sha256 = "sha256-etDbaBqJfIjbjY5TGOwnA4JddGaPx/7rWkE2gnSV4G8=";
+            }
         ];
 
         # Declarative settings.json settings
